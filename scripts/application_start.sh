@@ -1,13 +1,15 @@
 #!/bin/bash
 
-#give permission for everything in the express-app directory
-sudo chmod -R 777 /home/ubuntu/backend
+#give permission for everything in the therapypanda directory
+sudo chmod -R 777 /home/ubuntu/therapypanda
 
 #navigate into our working directory where we have all our github files
-cd /home/ubuntu/backend
+cd /home/ubuntu/therapypanda
 
-#install node modules
-npm install
+#give permission for everything in the html directory
+sudo chmod -R 777 /var/www/html
 
-#start our node app in the background
-node app.js > app.out.log 2> app.err.log < /dev/null & 
+#moving the code from therapypanda to /var/www/html.
+sudo mv -R /home/ubuntu/therapypanda /var/www/html
+
+
